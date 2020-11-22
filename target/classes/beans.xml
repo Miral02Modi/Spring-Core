@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="employeeService"
+		class="com.bridge.springcore.service.EmployeeService">
+		<property name="name" value="Jayesh"></property>
+		<property name="zipCode">
+			<list>
+				<value>445334</value>
+				<value>445335</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="employeeService1"
+		class="com.bridge.springcore.service.EmployeeService">
+		<constructor-arg name="name" value="Jaymin"/>
+		<constructor-arg name="zipCode">
+			<list>
+				<value>445334</value>
+				<value>445335</value>
+			</list>
+		</constructor-arg>
+	</bean>	
+</beans>
